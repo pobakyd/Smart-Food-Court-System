@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB558FBB-F6F4-4427-A704-34FD1C97998F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SmartFoodCourtSystem</RootNamespace>
+    <AssemblyName>SmartFoodCourtSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillInforDAO.cs" />
+    <Compile Include="DAO\CategoryDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\FoodDAO.cs" />
+    <Compile Include="DAO\MenuDAO.cs" />
+    <Compile Include="DAO\OrderFoodDAO.cs" />
+    <Compile Include="DAO\OrderFoodInfoDAO.cs" />
+    <Compile Include="DAO\TableDAO.cs" />
+    <Compile Include="DAO\UserMessDAO.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\Bill.cs" />
+    <Compile Include="DTO\BillInfo.cs" />
+    <Compile Include="DTO\Category.cs" />
+    <Compile Include="DTO\Food.cs" />
+    <Compile Include="DTO\Menu.cs" />
+    <Compile Include="DTO\OrderFood.cs" />
+    <Compile Include="DTO\OrderFoodInfo.cs" />
+    <Compile Include="DTO\Table.cs" />
+    <Compile Include="fAccountProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAccountProfile.Designer.cs">
+      <DependentUpon>fAccountProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAdmin.Designer.cs">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fEntrance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEntrance.Designer.cs">
+      <DependentUpon>fEntrance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fFoodDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fFoodDetail.Designer.cs">
+      <DependentUpon>fFoodDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fOrderFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fOrderFood.Designer.cs">
+      <DependentUpon>fOrderFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fOrderManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fOrderManager.Designer.cs">
+      <DependentUpon>fOrderManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRegister.Designer.cs">
+      <DependentUpon>fRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSearchFoodUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSearchFoodUser.Designer.cs">
+      <DependentUpon>fSearchFoodUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTableManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTableManager.Designer.cs">
+      <DependentUpon>fTableManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUserCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUserCart.Designer.cs">
+      <DependentUpon>fUserCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUserInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUserInterface.Designer.cs">
+      <DependentUpon>fUserInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUser_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUser_History.Designer.cs">
+      <DependentUpon>fUser_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUser_Mess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUser_Mess.Designer.cs">
+      <DependentUpon>fUser_Mess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fWelcome.Designer.cs">
+      <DependentUpon>fWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fAccountProfile.resx">
+      <DependentUpon>fAccountProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAdmin.resx">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fEntrance.resx">
+      <DependentUpon>fEntrance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fFoodDetail.resx">
+      <DependentUpon>fFoodDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fOrderFood.resx">
+      <DependentUpon>fOrderFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fOrderManager.resx">
+      <DependentUpon>fOrderManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRegister.resx">
+      <DependentUpon>fRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSearchFoodUser.resx">
+      <DependentUpon>fSearchFoodUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTableManager.resx">
+      <DependentUpon>fTableManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUserCart.resx">
+      <DependentUpon>fUserCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUserInterface.resx">
+      <DependentUpon>fUserInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUser_History.resx">
+      <DependentUpon>fUser_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUser_Mess.resx">
+      <DependentUpon>fUser_Mess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fWelcome.resx">
+      <DependentUpon>fWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quay_1_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quay_2_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quay_2_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quay_3_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banhmi_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banhmi_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banhmi_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banhmi_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banhmi_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giaikhat_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giaikhat_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giaikhat_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giaikhat_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giaikhat_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trasua_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trasua_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trasua_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bun_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bun_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bun_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bun_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bun_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\com_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\com_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\com_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\com_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\com_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\annhanh_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\annhanh_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\annhanh_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_food.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
